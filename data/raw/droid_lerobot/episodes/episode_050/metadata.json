@@ -1,0 +1,9 @@
+{
+  "episode_id": "lerobot_droid_100_episode_050",
+  "source_dataset": "lerobot/droid_100",
+  "source_origin": "DROID public dataset converted to LeRobot parquet",
+  "task": "Put the towel on the table into the box",
+  "task_index": 24,
+  "length": 1347,
+  "fps": 15
+}

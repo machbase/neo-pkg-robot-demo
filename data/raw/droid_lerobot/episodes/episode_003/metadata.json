@@ -1,0 +1,9 @@
+{
+  "episode_id": "lerobot_droid_100_episode_003",
+  "source_dataset": "lerobot/droid_100",
+  "source_origin": "DROID public dataset converted to LeRobot parquet",
+  "task": "Place the pack of doritos inside the sink",
+  "task_index": 3,
+  "length": 205,
+  "fps": 15
+}

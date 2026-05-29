@@ -1,0 +1,11 @@
+{
+  "name": "phy-ai-robot-demo",
+  "version": "0.1.0",
+  "scripts": {
+    "server": "./app/server.js",
+    "schema": "./scripts/schema.js",
+    "download-data": "./scripts/download-data.js",
+    "ingest": "./scripts/ingest.js"
+  },
+  "dependencies": {}
+}

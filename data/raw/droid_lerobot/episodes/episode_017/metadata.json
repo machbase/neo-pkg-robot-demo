@@ -1,0 +1,9 @@
+{
+  "episode_id": "lerobot_droid_100_episode_017",
+  "source_dataset": "lerobot/droid_100",
+  "source_origin": "DROID public dataset converted to LeRobot parquet",
+  "task": "",
+  "task_index": 5,
+  "length": 264,
+  "fps": 15
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machbase Robot Arm Physical AI</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="viewport">
+      <canvas id="scene"></canvas>
+      <div class="topbar">
+        <div class="title-block">
+          <h1>Machbase Robot Arm Physical AI</h1>
+          <p id="datasetLabel">Loading dataset</p>
+        </div>
+        <div class="status" id="sourceLabel">initializing</div>
+      </div>
+      <div class="task-panel">
+        <span>Task</span>
+        <strong id="taskLabel">--</strong>
+      </div>
+      <aside class="dashboard">
+        <div class="metric-grid">
+          <div><span>Frame Query</span><strong id="frameQueryMs">-- ms</strong></div>
+          <div><span>Window Query</span><strong id="windowQueryMs">-- ms</strong></div>
+          <div><span>JSON Rows</span><strong id="signalRows">--</strong></div>
+          <div><span>Events</span><strong id="eventCount">--</strong></div>
+        </div>
+        <div class="analysis-row">
+          <div>
+            <span>Phase</span>
+            <strong id="phaseLabel">--</strong>
+          </div>
+          <div>
+            <span>Anomaly</span>
+            <strong id="anomalyLabel">0.00</strong>
+          </div>
+          <div>
+            <span>Energy</span>
+            <strong id="energyLabel">0.00</strong>
+          </div>
+        </div>
+        <div class="chart-panel">
+          <div class="chart-head"><span>JSON Path Rollup</span><strong id="chartRange">30s</strong></div>
+          <canvas id="signalChart" width="520" height="190"></canvas>
+          <div class="legend">
+            <span class="legend-speed">EE speed</span>
+            <span class="legend-energy">Energy</span>
+            <span class="legend-anomaly">Anomaly</span>
+          </div>
+        </div>
+        <div class="event-panel">
+          <div class="chart-head"><span>Active Events</span><strong id="eventQueryMs">-- ms</strong></div>
+          <div id="eventList" class="event-list"></div>
+        </div>
+      </aside>
+      <div class="readout">
+        <div><span>Frame</span><strong id="frameId">0</strong></div>
+        <div><span>Episode</span><strong id="episodeId">--</strong></div>
+        <div><span>Gripper</span><strong id="gripper">0.00</strong></div>
+        <div><span>EE Speed</span><strong id="eeSpeed">0.00 m/s</strong></div>
+      </div>
+    </section>
+    <section class="controls">
+      <div class="transport-controls">
+        <button class="icon-button" id="skipBackLargeButton" title="Back 30 seconds" aria-label="Back 30 seconds">&lt;&lt;</button>
+        <button class="icon-button" id="skipBackButton" title="Back 5 seconds" aria-label="Back 5 seconds">&lt;</button>
+        <button class="icon-button" id="playButton" title="Play or pause" aria-label="Play or pause">▶</button>
+        <button class="icon-button" id="skipForwardButton" title="Forward 5 seconds" aria-label="Forward 5 seconds">&gt;</button>
+        <button class="icon-button" id="skipForwardLargeButton" title="Forward 30 seconds" aria-label="Forward 30 seconds">&gt;&gt;</button>
+      </div>
+      <div class="timeline-wrap">
+        <div id="eventRail" class="event-rail"></div>
+        <div id="currentTimeBubble" class="timeline-bubble">--:--:--</div>
+        <input id="timeline" type="range" min="0" max="1000" value="0" aria-label="Timeline">
+        <div class="timeline-labels">
+          <span id="startTimeLabel">--:--:--</span>
+          <span id="endTimeLabel">--:--:--</span>
+        </div>
+      </div>
+      <select id="speedSelect" aria-label="Playback speed">
+        <option value="0.25">0.25x</option>
+        <option value="0.5">0.5x</option>
+        <option value="1" selected>1x</option>
+        <option value="2">2x</option>
+        <option value="4">4x</option>
+      </select>
+      <button class="icon-button" id="resetViewButton" title="Reset camera" aria-label="Reset camera">O</button>
+      <div class="time-label" id="timeLabel">--</div>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

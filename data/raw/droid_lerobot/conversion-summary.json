@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "source": "lerobot/droid_100",
+  "episodes": 100,
+  "frames": 32212,
+  "out": "data/raw/droid_lerobot/episodes",
+  "sample_episodes": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

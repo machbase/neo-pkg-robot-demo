@@ -1,0 +1,9 @@
+{
+  "episode_id": "lerobot_droid_100_episode_066",
+  "source_dataset": "lerobot/droid_100",
+  "source_origin": "DROID public dataset converted to LeRobot parquet",
+  "task": "Put the orange toy into the wooden box",
+  "task_index": 31,
+  "length": 140,
+  "fps": 15
+}
